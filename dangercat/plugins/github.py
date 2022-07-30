@@ -21,7 +21,7 @@ async def download(event):
     splt = txts.split("|")
     path = splt[0]
     branch = splt[1] or "master"
-    warbot = await eor(event, "Processing ...")
+    dangercat = await eor(event, "Processing ...")
     if not os.path.isdir(GIT_TEMP_DIR):
         os.makedirs(GIT_TEMP_DIR)
     start = datetime.datetime.now()
@@ -38,7 +38,7 @@ async def download(event):
         end = datetime.datetime.now()
         ms = (end - start).seconds
         await event.delete()
-        await warbot.edit(
+        await dangercat.edit(
             "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
         )
         await warbot.edit("Committing to Github....")
