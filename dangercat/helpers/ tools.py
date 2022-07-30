@@ -3,8 +3,8 @@ import re
 
 from telethon import events
 
-from warbot import bot
-from warbot.config import Config
+from dangercat import bot
+from dangercat.config import Config
 
 
 # forward check
