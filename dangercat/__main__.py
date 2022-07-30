@@ -6,11 +6,11 @@ from pathlib import Path
 from telethon import Button, TelegramClient
 from telethon.utils import get_peer_id
 
-from warbot import LOGS, bot, tbot
-from warbot.clients.session import Hell, H2, H3, H4, H5
-from warbot.config import Config
-from warbot.utils import join_it, load_module, logger_check, start_msg, update_sudo, plug_channel
-from warbot.version import __hell__ as hellver
+from dangercat import LOGS, bot, tbot
+from dangercat.clients.session import Hell, H2, H3, H4, H5
+from dangercat.config import Config
+from dangercat.utils import join_it, load_module, logger_check, start_msg, update_sudo, plug_channel
+from dangercat.version import __hell__ as hellver
 
 hl = Config.HANDLER
 
@@ -62,7 +62,7 @@ async def start_hellbot():
         tbot_id = await tbot.get_me()
         Config.BOT_USERNAME = f"@{tbot_id.username}"
         bot.tgbot = tbot
-        LOGS.info("••• Starting Waruserbot •••")
+        LOGS.info("••• Starting dangercat•••")
         C1 = await hells(Config.STRING_SESSION, bot, "STRING_SESSION")
         C2 = await hells(Config.SESSION_2, H2, "SESSION_2")
         C3 = await hells(Config.SESSION_3, H3, "SESSION_3")
@@ -70,12 +70,12 @@ async def start_hellbot():
         C5 = await hells(Config.SESSION_5, H5, "SESSION_5")
         await tbot.start()
         total = C1 + C2 + C3 + C4 + C5
-        LOGS.info("••• WarBot Startup Completed •••")
+        LOGS.info("••• dangercat Startup Completed •••")
         LOGS.info("••• Starting to load Plugins •••")
-        await plug_load("warbot/plugins/*.py")
+        await plug_load("dangercat/plugins/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
-        LOGS.info("⚡ Your Waruserbot Is Now Working ⚡")
-        LOGS.info("Head to @waruserBot for Updates. Also join @waruserbotsupport chat group to get help regarding to waruserbot.")
+        LOGS.info("⚡ Your dangercat Is Now Working ⚡")
+        LOGS.info("Head to @danger_bots for Updates. Also join @dangerbots chat group to get help regarding to waruserbot.")
         LOGS.info(f"» Total Clients = {str(total)} «")
         await hell_is_on(total)
     except Exception as e:
