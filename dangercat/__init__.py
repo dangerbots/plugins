@@ -6,8 +6,8 @@ import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
-from warbot.clients.session import H2, H3, H4, H5, Hell, WarBot
-from warbot.config import Config
+from dangercat.clients.session import H2, H3, H4, H5, Hell, WarBot
+from dangercat.config import Config
 
 
 StartTime = time.time()
@@ -87,4 +87,4 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-# warbot
+#dangercat
