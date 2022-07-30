@@ -1,6 +1,6 @@
 import functools
 from telethon import events
-from warbot import *
+from dangercat import *
 
 bothandler = Config.BOT_HANDLER
 
