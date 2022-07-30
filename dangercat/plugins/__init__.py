@@ -1,21 +1,21 @@
 import datetime
 import time
 
-from warbot import *
-from warbot.clients import *
-from warbot.config import Config
-from warbot.helpers import *
-from warbot.utils import *
-from warbot.random_strings import *
-from warbot.version import __hell__
-from warbot.sql.gvar_sql import gvarstat
+from dangercat import *
+from dangercat.clients import *
+from dangercat.config import Config
+from dangercat.helpers import *
+from dangercat.utils import *
+from dangercat.random_strings import *
+from dangercat.version import __hell__
+from dangercat.sql.gvar_sql import gvarstat
 from telethon import version
 
-hell_logo = "./warbot/resources/pics/hellbot_logo.jpg"
-cjb = "./warbot/resources/pics/cjb.jpg"
-restlo = "./warbot/resources/pics/rest.jpeg"
-shuru = "./warbot/resources/pics/shuru.jpg"
-shhh = "./warbot/resources/pics/chup_madarchod.jpeg"
+hell_logo = "./dangercat/resources/pics/hellbot_logo.jpg"
+cjb = "./dangercat/resources/pics/cjb.jpg"
+restlo = "./dangercat/resources/pics/rest.jpeg"
+shuru = "./dangercat/resources/pics/shuru.jpg"
+shhh = "./dangercat/resources/pics/chup_madarchod.jpeg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
 hell_ver = __hell__
@@ -37,17 +37,17 @@ else:
     abuse_m ="Disabled"
 
 
-my_channel = Config.MY_CHANNEL or "waruserbot"
-my_group = Config.MY_GROUP or "waruserbotsupport"
+my_channel = Config.MY_CHANNEL or "danger_bots"
+my_group = Config.MY_GROUP or "dangerbots"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/waruserbot"
-hell_channel = f"[WarUserBot]({chnl_link})"
-grp_link = "https://t.me/waruserbotsupport"
-hell_grp = f"[Waruserbot Group]({grp_link})"
+chnl_link = "https://t.me/dangerbots"
+hell_channel = f"[dangercat]({chnl_link})"
+grp_link = "https://t.me/dangerbots"
+hell_grp = f"[dangerbots]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user
