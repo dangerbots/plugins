@@ -2,10 +2,10 @@ from telethon import Button
 from telethon.tl import functions
 from telethon.tl.types import ChatAdminRights
 
-from warbot import LOGS
-from warbot.config import Config
-from warbot.helpers.int_str import make_int
-from warbot.sql.gvar_sql import addgvar, gvarstat
+from dangercat import LOGS
+from dangercat.config import Config
+from dangercat.helpers.int_str import make_int
+from dangercat.sql.gvar_sql import addgvar, gvarstat
 
 
 # Creates the logger group on first deploy and adds the helper bot
