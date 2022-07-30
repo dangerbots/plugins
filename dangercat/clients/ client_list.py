@@ -2,7 +2,7 @@ from telethon.utils import get_peer_id
 from telethon.tl.functions.users import GetFullUserRequest
 
 from .session import Hell, H2, H3, H4, H5
-from warbot.sql.gvar_sql import gvarstat
+from dangercat.sql.gvar_sql import gvarstat
 
 
 async def clients_list():
