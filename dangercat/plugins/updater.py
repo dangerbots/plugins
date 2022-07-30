@@ -23,18 +23,18 @@ NO_HEROKU_APP_CFGD = "No Heroku App Found!"
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
 RESTARTING_APP = "Restarting Heroku App..."
 IS_SELECTED_DIFFERENT_BRANCH = "Looks like a custom branch {branch_name} is being used!\nIn this case, updater is unable to identify the branch to be updated. Please check out to an official branch, and re-start the updater."
-warbot_info = "https://raw.githubusercontent.com/waruserbot/Plugins/master/warbot-info.json"
+warbot_info = "https://raw.githubusercontent.com/dangercat/Plugins/master/dangercat-info.json"
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 requirements_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "requirements.txt")
 
 
 async def war_info(warbot_info):
     infos = requests.get(warbot_info).json()
-    _version = infos['WARBOT-INFO']['version']
-    _release = infos['WARBOT-INFO']['release-date']
-    _branch = infos['WARBOT-INFO']['branch']
-    _author = infos['WARBOT-INFO']['author']
-    _auturl = infos['WARBOT-INFO']['author-url']
+    _version = infos['dangercat-INFO']['version']
+    _release = infos['dangercat-INFO']['release-date']
+    _branch = infos['dangercat-INFO']['branch']
+    _author = infos['dangercat-INFO']['author']
+    _auturl = infos['dangercat-INFO']['author-url']
     return _version, _release, _branch, _author, _auturl
 
 
