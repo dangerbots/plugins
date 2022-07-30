@@ -16,9 +16,9 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from warbot import *
-from warbot.helpers import *
-from warbot.config import Config
+from dangercat import *
+from dangercat.helpers import *
+from dangercat.config import Config
 
 
 # this shit handles errors
