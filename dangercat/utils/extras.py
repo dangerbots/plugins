@@ -17,11 +17,11 @@ from telethon.tl import functions
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from warbot import *
-from warbot.helpers.pasters import pasty
-from warbot.helpers.int_str import make_int
-from warbot.config import Config
-from warbot.sql.gvar_sql import gvarstat
+from dangercat import *
+from dangercat.helpers.pasters import pasty
+from dangercat.helpers.int_str import make_int
+from dangercat.config import Config
+from dangercat.sql.gvar_sql import gvarstat
 
 
 # either edit or reply that msg
