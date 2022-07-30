@@ -16,11 +16,11 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator, InputMessagesFilterDocument
 
-from warbot import *
-from warbot.clients import *
-from warbot.helpers import *
-from warbot.config import *
-from warbot.utils import *
+from dangercat import *
+from dangercat.clients import *
+from dangercat.helpers import *
+from dangercat.config import *
+from dangercat.utils import *
 
 
 # ENV
@@ -111,8 +111,8 @@ def remove_plugin(shortname):
 
 async def plug_channel(client, channel):
     if channel:
-        LOGS.info("⚡ WarUserBot ⚡ - PLUGIN CHANNEL DETECTED.")
-        LOGS.info("⚡ WarUserBot ⚡ - Starting to load extra plugins.")
+        LOGS.info("⚡ DANGERcat⚡ - PLUGIN CHANNEL DETECTED.")
+        LOGS.info("⚡ DANGERCAT⚡ - Starting to load extra plugins.")
         plugs = await client.get_messages(channel, None, filter=InputMessagesFilterDocument)
         total = int(plugs.total)
         for plugins in range(total):
