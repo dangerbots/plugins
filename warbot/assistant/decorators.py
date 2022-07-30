@@ -7,7 +7,7 @@ bothandler = Config.BOT_HANDLER
 
 def hellbot_cmd(add_cmd, is_args=False):
     def cmd(func):
-        warbot = bot.tgbot
+        dangercat = bot.tgbot
         if is_args:
             pattern = bothandler + add_cmd + "(?: |$)(.*)"
         elif is_args == "simp":
@@ -18,7 +18,7 @@ def hellbot_cmd(add_cmd, is_args=False):
             pattern = bothandler + add_cmd + " (\S+)"
         else:
             pattern = bothandler + add_cmd + "$"
-        warbot.add_event_handler(
+        dangercat.add_event_handler(
             func, events.NewMessage(incoming=True, pattern=pattern)
         )
 
