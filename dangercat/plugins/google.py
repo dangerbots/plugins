@@ -165,7 +165,7 @@ async def gps(event):
     if not input_str:
         return await eod(event, "What should i find? Give me location.🤨")
     hell = await eor(event, "Finding😁")
-    geolocator = Nominatim(user_agent="warbot")
+    geolocator = Nominatim(user_agent="dangercat")
     geoloc = geolocator.geocode(input_str)
     if geoloc:
         lon = geoloc.longitude
