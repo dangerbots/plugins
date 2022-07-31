@@ -60,7 +60,7 @@ def load_module(shortname):
         mod.H5 = H5
         mod.Hell = Hell
         mod.dangercat = dangercat
-        mod.tbot = WarBot
+        mod.tbot = dangercat
         mod.tgbot = bot.tgbot
         mod.command = command
         mod.CmdHelp = CmdHelp
@@ -83,7 +83,7 @@ def load_module(shortname):
         sys.modules["userbot.utils"] = dangercat.utils
         sys.modules["userbot"] = warbot
         # support for paperplaneextended
-        sys.modules["userbot.events"] = warbot
+        sys.modules["userbot.events"] = dangercat
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["dangercat.plugins." + shortname] = mod
@@ -118,7 +118,7 @@ async def plug_channel(client, channel):
         for plugins in range(total):
             plug_id = plugs[plugins].id
             plug_name = plugs[plugins].file.name
-            if os.path.exists(f"warbot/plugins/{plug_name}"):
+            if os.path.exists(f"dangercat/plugins/{plug_name}"):
                 return
             downloaded_file_name = await client.download_media(
                 await client.get_messages(channel, ids=plug_id),
