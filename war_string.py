@@ -10,7 +10,7 @@ print("•••   Dangercat  SESSION  GENERATOR   •••")
 print("\nHello!! Welcome to dangercat Session Generator\n")
 okvai = input("Enter 69 to continue: ")
 if okvai == "69":
-    print("Choose the string session type: \n1. WarBot \n2. Music Bot")
+    print("Choose the string session type: \n1. dangercat \n2. Music Bot")
     library = input("\nYour Choice: ")
     if library == "1":
         print("\nTelethon Session For WarBot")
