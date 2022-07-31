@@ -129,7 +129,7 @@ async def _(event):
 CmdHelp("evaluators").add_command(
   "eval", "<expr>", "Execute a python script", "eval print('Hello World.')"
 ).add_command(
-  "exec", "<command>", "Execute a Terminal command on WarBot server and shows details"
+  "exec", "<command>", "Execute a Terminal command on dangercat server and shows details"
 ).add_command(
   "bash", "<query>", "Bash your codes on linux and gives the output in current chat"
 ).add_info(
