@@ -13,7 +13,7 @@ FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 async def _(event):
     current_time = datetime.datetime.now().strftime(
         "⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\
-        \n   WARBOT TIMEZONE   \
+        \n   DangerCat TIMEZONE   \
         \n   LOCATION: India🇮🇳  \
         \n   Time: %H:%M:%S  \
         \n   Date: %d.%m.%y     \
