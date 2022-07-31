@@ -6,7 +6,7 @@ import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
-from dangercat.clients.session import H2, H3, H4, H5, Hell, WarBot
+from dangercat.clients.session import H2, H3, H4, H5, Hell, dangercat
 from dangercat.config import Config
 
 
@@ -27,7 +27,7 @@ else:
 LOGS = getLogger(__name__)
 
 bot = Hell
-tbot = WarBot
+tbot = dangercat
 
 
 if not Config.API_HASH:
