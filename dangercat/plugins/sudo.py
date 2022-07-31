@@ -2,7 +2,7 @@ import os
 
 from telethon.tl.functions.users import GetFullUserRequest
 
-from warbot.sql.gvar_sql import addgvar, gvarstat, delgvar
+from dangercat.sql.gvar_sql import addgvar, gvarstat, delgvar
 from . import *
 
 
