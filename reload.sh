@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 -m warbot
+python3 -m dangercat
