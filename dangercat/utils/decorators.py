@@ -313,4 +313,4 @@ def command(**args):
 
     return decorator
 
-# warbot
+# dangercat
