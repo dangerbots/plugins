@@ -16,10 +16,10 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from warbot import *
-from warbot.config import Config
-from warbot.helpers import *
-from warbot.utils import *
+from dangercat import *
+from dangercat.config import Config
+from dangercat.helpers import *
+from dangercat.utils import *
 
 async def reply_id(event):
     reply_to_id = None
@@ -111,4 +111,4 @@ def time_formatter(milliseconds: int) -> str:
     )
     return tmp[:-2]
 
-# warbot
+# dangercat
