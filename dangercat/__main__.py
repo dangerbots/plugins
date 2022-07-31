@@ -14,7 +14,7 @@ from dangercat.version import __hell__ as hellver
 
 hl = Config.HANDLER
 
-WAR_PIC = "https://telegra.ph/file/44edfd6fa6faaf5284264.jpg"
+DCAT_PIC = "https://telegra.ph/file/44edfd6fa6faaf5284264.jpg"
 
 
 # Client Starter
@@ -39,7 +39,7 @@ async def plug_load(path):
             path1 = Path(hell.name)
             shortname = path1.stem
             if shortname.replace(".py", "") in Config.UNLOAD:
-                os.remove(Path(f"warbot/plugins/{shortname}.py"))
+                os.remove(Path(f"dangercat/plugins/{shortname}.py"))
             else:
                 load_module(shortname.replace(".py", ""))      
 
