@@ -15,7 +15,7 @@ async def _(event):
     response = requests.get(url)
     hell = await eor(event, "`Creating a fake face...`")
     if response.status_code == 200:
-      with open("WARBOT.jpg", 'wb') as f:
+      with open("dangercat.jpg", 'wb') as f:
         f.write(response.content)
     else:
         return await eod(hell, "Failed to create Fake Face! Try again later.")
@@ -23,7 +23,7 @@ async def _(event):
     fole = "WARBOT.jpg"
     await event.client.send_file(event.chat_id, fole, caption=captin, force_document=False)
     await hell.delete()
-    os.system("rm /root/dangercat/WARBOT.jpg ")
+    os.system("rm /root/dangercat/dangercat.jpg ")
 
 
 @hell_cmd(pattern="fake ([\s\S]*)")
