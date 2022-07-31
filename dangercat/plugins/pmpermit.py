@@ -5,7 +5,7 @@ import os
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-from warbot.sql import pmpermit_sql as pm_sql
+from dangercat.sql import pmpermit_sql as pm_sql
 from . import *
 
 PM_WARNS = {}
@@ -158,10 +158,10 @@ if PM_ON_OFF != "DISABLE":
         if len(approved_users) > 0:
             for a_user in approved_users:
                 if a_user.reason:
-                    APPROVED_PMs += f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) for {a_user.reason}\n"
+                    APPROVED_PMs += f"馃憠 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) for {a_user.reason}\n"
                 else:
                     APPROVED_PMs += (
-                        f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id})\n"
+                        f"馃憠 [{a_user.chat_id}](tg://user?id={a_user.chat_id})\n"
                     )
         else:
             APPROVED_PMs = "no Approved PMs (yet)"
@@ -187,7 +187,7 @@ if PM_ON_OFF != "DISABLE":
         cid = await client_id(event)
         Xabhish3k, hell_mention = cid[0], cid[2]
         CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
-        HELL_FIRST = "**🔥 WarUserBot Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nHello!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(hell_mention, CSTM_PMP)
+        HELL_FIRST = "**馃敟 WarUserBot Pr卯v茫鈥犆� S锚莽眉r茂ty Pr酶鈥犆睹祃 馃敟**\n\nHello!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(hell_mention, CSTM_PMP)
         if event.sender_id == Xabhish3k:
             return
         if str(event.sender_id) in DEVLIST:
@@ -274,9 +274,9 @@ CmdHelp("pm_permit").add_command(
 ).add_command(
   "unblock", "<in pm>/<reply>", "Unblocks the mentioned user."
 ).add_command(
-  "listapproved", None, "Sends the list of all users approved by Hêllẞø†"
+  "listapproved", None, "Sends the list of all users approved by H锚ll岷灻糕€�"
 ).add_info(
   "PM SECURITY"
 ).add_warning(
-  "✅ Harmless Module."
+  "鉁� Harmless Module."
 ).add()
