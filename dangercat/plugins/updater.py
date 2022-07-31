@@ -23,13 +23,13 @@ NO_HEROKU_APP_CFGD = "No Heroku App Found!"
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
 RESTARTING_APP = "Restarting Heroku App..."
 IS_SELECTED_DIFFERENT_BRANCH = "Looks like a custom branch {branch_name} is being used!\nIn this case, updater is unable to identify the branch to be updated. Please check out to an official branch, and re-start the updater."
-warbot_info = "https://raw.githubusercontent.com/dangercat/Plugins/master/dangercat-info.json"
+dangercat_info = "https://raw.githubusercontent.com/dangercat/Plugins/master/dangercat-info.json"
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 requirements_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "requirements.txt")
 
 
-async def war_info(warbot_info):
-    infos = requests.get(warbot_info).json()
+async def war_info(dangercat_info):
+    infos = requests.get(dangercat_info).json()
     _version = infos['dangercat-INFO']['version']
     _release = infos['dangercat-INFO']['release-date']
     _branch = infos['dangercat-INFO']['branch']
@@ -91,7 +91,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await eor(event, "✅ Successfully updated WarUserBot!\n\nBot is restarting please wait for a minute.")
-    args = [sys.executable, "-m", "warbot"]
+    args = [sys.executable, "-m", "dangercat"]
     os.execle(sys.executable, *args, os.environ)
     return
 
@@ -145,7 +145,7 @@ async def upstream(event):
     cid = await client_id(event)
     hell_mention = cid[2]
     if changelog == "" and not force_update:
-        _version, _release, _branch, _author, _auturl = await war_info(warbot_info)
+        _version, _release, _branch, _author, _auturl = await war_info(dangercat_info)
         output_ = f"**Your Bot Version :** `{hell_ver}` \n**Owner :** {hell_mention} \n\n**Official WarUserBot Version :** `{_version}` \n**Release Date :** `{_release}` \n**Official Repo Branch :** `{_branch}` \n**Update By :** [{_author}]({_auturl})"
         if str(_version) not in str(hell_ver):
             output_ += f"\n\n**Do** `{hl}update build` **to update your WarUserBot to latest version.**"
@@ -249,7 +249,7 @@ async def upstream(event):
     ac_br = repo.active_branch.name
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
-    _version, _release, _branch, _author, _auturl = await war_info(warbot_info)
+    _version, _release, _branch, _author, _auturl = await war_info(dangercat_info)
     await event.edit(f"<b><i>waruserbot Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
     await deploy(event, repo, ups_rem, ac_br, txt)
 
