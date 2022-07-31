@@ -18,14 +18,14 @@ if okvai == "69":
         API_HASH = input("\nEnter API HASH here: ")
         with TelegramClient(StringSession(), APP_ID, API_HASH) as dangercat:
             print("\nYour dangercat Session Is sent in your Telegram Saved Messages.")
-            dangercat.send_message("me", f"#WARUSERBOT #WARUSERBOT_SESSION \n\n`{dangercat.session.save()}`")
+            dangercat.send_message("me", f"#DANGERCAT #DANGERCAT_SESSION \n\n`{dangercat.session.save()}`")
     elif library == "2":
         print("Pyrogram Session for Music Bot")
         APP_ID = int(input("\nEnter APP ID here: "))
         API_HASH = input("\nEnter API HASH here: ")
         with Client(':memory:', api_id=APP_ID, api_hash=API_HASH) as warbot:
             print("\nYour dangercat Session Is sent in your Telegram Saved Messages.")
-            dangercat.send_message("me", f"#dangercat_MUSIC #WARBOT_SESSION\n\n`{warbot.export_session_string()}`")
+            dangercat.send_message("me", f"#dangercat_MUSIC #DANGERCAT_SESSION\n\n`{dangercat.export_session_string()}`")
     else:
         print("Please Enter 1 or 2 only.")
 else:
