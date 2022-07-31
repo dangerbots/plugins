@@ -1,7 +1,7 @@
 # EDIT THIS FILE AND RENAME TO config.py TO MAKE THIS BOT WORKING
 # FILL THESE VALUES ACCORDINGLY.
 
-from warbot.config.hell_config import Config
+from dangercat.config.hell_config import Config
 
 class Development(Config):
   # get these values from my.telegram.org. 
@@ -30,4 +30,4 @@ class Development(Config):
 
 
 # end of required config
-# warbot
+# dangercat
