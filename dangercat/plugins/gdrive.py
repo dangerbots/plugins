@@ -12,7 +12,7 @@ async def g_download(event):
     await hell.edit(f"**File Downloaded !!**\n\n__Name :__ `{str(file_name)}`")
 
 CmdHelp("gdrive").add_command(
-  "gdl", "<gdrive link>", f"Downloads the file from gdirve to WarBot's local storage. Use {hl}upload <path> to upload it."
+  "gdl", "<gdrive link>", f"Downloads the file from gdirve to dangercat's local storage. Use {hl}upload <path> to upload it."
 ).add_info(
   "Google Drive Downloader"
 ).add_warning(
