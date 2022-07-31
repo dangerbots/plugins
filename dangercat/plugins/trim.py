@@ -5,7 +5,7 @@ import time
 
 from . import *
 
-FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./trim/warbot.media.ffmpeg"
+FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./trim/dangercat.media.ffmpeg"
 
 
 @hell_cmd(pattern="tsave$")
