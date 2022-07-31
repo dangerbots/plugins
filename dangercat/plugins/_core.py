@@ -168,7 +168,7 @@ CmdHelp("core").add_command(
 ).add_command(
   "send", "<file name>", "Sends the given file from your userbot server, if any.", "send alive"
 ).add_command(
-  "cmds", None, "Gives out the list of modules in WarBot."
+  "cmds", None, "Gives out the list of modules in dangercat."
 ).add_command(
   "repo", None, "Gives Waruserbot's Github repo link."
 ).add_command(
