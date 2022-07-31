@@ -1,7 +1,7 @@
 from telethon import events
 
-from warbot.sql.welcome_sql import get_current_welcome, add_welcome, rm_welcome, update_welcome
-from warbot.sql.gvar_sql import gvarstat, addgvar, delgvar
+from dangercat.sql.welcome_sql import get_current_welcome, add_welcome, rm_welcome, update_welcome
+from dangercat.sql.gvar_sql import gvarstat, addgvar, delgvar
 from . import *
 
 
