@@ -4,13 +4,13 @@ from telethon import TelegramClient
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
-from warbot.config import Config
+from dangercat.config import Config
 
 
 if Config.STRING_SESSION:
     session = StringSession(str(Config.STRING_SESSION))
 else:
-    session = "warbot"
+    session = "dangercat"
 
 try:
     Hell = TelegramClient(
