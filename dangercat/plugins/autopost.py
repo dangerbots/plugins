@@ -1,7 +1,7 @@
 from telethon import events
 
-from warbot.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
-from warbot.sql.gvar_sql import gvarstat, addgvar, delgvar
+from dangercat.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
+from dangercat.sql.gvar_sql import gvarstat, addgvar, delgvar
 
 from . import *
 
