@@ -5,7 +5,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 from telethon.tl.functions.users import GetFullUserRequest
 
-from warbot.sql.fsub_sql import *
+from dangercat.sql.fsub_sql import *
 from . import *
 
 
