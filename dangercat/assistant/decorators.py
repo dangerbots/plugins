@@ -29,7 +29,7 @@ def is_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            warbot = bot.tgbot
+            dangercat = bot.tgbot
             perms = await hellbot.get_permissions(event.chat_id, event.sender_id)
             user = event.sender_id
             Xabhish3k = bot.uid
@@ -51,7 +51,7 @@ def is_bot_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            warbot = bot.tgbot
+            dangercat = bot.tgbot
             boat = await hellbot.get_me()
             perms = await hellbot.get_permissions(event.chat_id, boat)
             if perms.is_admin:
