@@ -124,7 +124,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
         elif event.query.user_id in auth and query == "alive":
             uptime = await get_time((time.time() - StartTime))
-            alv_msg = gvarstat("ALIVE_MSG") or "»»» <b>waruserbot is online</b> «««"
+            alv_msg = gvarstat("ALIVE_MSG") or "»»» <b>dangercat is online</b> «««"
             he_ll = alive_txt.format(alv_msg, tel_ver, hell_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{HELL_USER}", f"tg://openmessage?user_id={xabhish3k}")],
@@ -153,7 +153,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     PIC,
                     text=he_ll,
-                    title="Warbot Alive",
+                    title="dangercat Alive",
                     buttons=alv_btn,
                     link_preview=False,
                     parse_mode="HTML",
@@ -161,7 +161,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             else:
                 result = builder.article(
                     text=he_ll,
-                    title="WarBot Alive",
+                    title="dangercat Alive",
                     buttons=alv_btn,
                     link_preview=False,
                     parse_mode="HTML",
@@ -169,7 +169,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
         elif event.query.user_id in auth and query == "pm_warn":
             CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
-            HELL_FIRST = "**🔥 waruserbot Private Security Protocol 🔥**\n\nHello!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(hell_mention, CSTM_PMP)
+            HELL_FIRST = "**🔥 dangercat Private Security Protocol 🔥**\n\nHello!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(hell_mention, CSTM_PMP)
             a = gvarstat("PMPERMIT_PIC")
             pic_list = []
             if a:
@@ -220,8 +220,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ʟᴇɢᴇɴᴅᴀʀʏ ᴀғ ᴡᴀʀᴜsᴇʀʙᴏᴛ⚡️**",
                 buttons=[
-                    [Button.url("📑 ʀᴇᴘᴏ 📑", "https://github.com/MeAbhish3k/waruserbot")],
-                    [Button.url("ᴡᴀʀᴜsᴇʀʙᴏᴛ", "https://t.me/waruserbot")],
+                    [Button.url("📑 ʀᴇᴘᴏ 📑", "https://github.com/MeAbhish3k/dangercat")],
+                    [Button.url("ᴡᴀʀᴜsᴇʀʙᴏᴛ", "https://t.me/dangercat")],
                 ],
             )
 
@@ -236,16 +236,16 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
         else:
             result = builder.article(
-                "@waruserbot",
-                text="""**Hey! This is [WarUserBot](https://t.me/waruserbot) \nYou can know more about me from the links given below 👇**""",
+                "@dangercat",
+                text="""**Hey! This is [WarUserBot](https://t.me/dangercat) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
                         custom.Button.url("🔥 ᴄʜᴀɴɴᴇʟ 🔥", "https://t.me/waruserBot"),
-                        custom.Button.url("⚡ ɢʀᴏᴜᴘ ⚡", "https://t.me/waruserbotsupport"),
+                        custom.Button.url("⚡ ɢʀᴏᴜᴘ ⚡", "https://t.me/dangercatsupport"),
                     ],
                     [
-                        custom.Button.url("✨ ʀᴇᴘᴏ ✨", "https://github.com/MeAbhish3k/waruserbot"),
-                        custom.Button.url("🔰 ᴛᴜᴛᴏʀɪᴀʟ 🔰", "https://t.me/waruserbot"),
+                        custom.Button.url("✨ ʀᴇᴘᴏ ✨", "https://github.com/MeAbhish3k/dangercat"),
+                        custom.Button.url("🔰 ᴛᴜᴛᴏʀɪᴀʟ 🔰", "https://t.me/dangercat"),
                     ],
                 ],
                 link_preview=False,
@@ -324,7 +324,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         auth = await clients_list()
         if event.query.user_id in auth:
             veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
-            await event.edit(f"**⚜️ WarUserBot Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {hell_mention}\n\n        [©️ waruserbot™️]({chnl_link})", buttons=veriler, link_preview=False)
+            await event.edit(f"**⚜️ WarUserBot Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {hell_mention}\n\n        [©️ dangercat™️]({chnl_link})", buttons=veriler, link_preview=False)
         else:
             reply_pop_up_alert = "You are not authorized to use me! \n© @WarUserBot ™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
@@ -348,7 +348,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         else:
-            return await event.answer("You are not authorized to use me! \n© waruserbot ™", cache_time=0, alert=True)
+            return await event.answer("You are not authorized to use me! \n© dangercat ™", cache_time=0, alert=True)
 
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)")))
