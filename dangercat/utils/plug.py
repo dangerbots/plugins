@@ -86,7 +86,7 @@ def load_module(shortname):
         sys.modules["userbot.events"] = warbot
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["warbot.plugins." + shortname] = mod
+        sys.modules["dangercat.plugins." + shortname] = mod
         LOGS.info("⚡ dangercat ⚡ - Successfully Imported " + shortname)
 
 
