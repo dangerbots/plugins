@@ -67,7 +67,7 @@ def load_module(shortname):
         mod.client_id = client_id
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = warbot.utils
+        sys.modules["uniborg.util"] = dangercat.utils
         mod.Config = Config
         mod.borg = bot
         mod.hellbot = bot
@@ -81,7 +81,7 @@ def load_module(shortname):
         mod.sudo_cmd = sudo_cmd
         # support for other userbots
         sys.modules["userbot.utils"] = dangercat.utils
-        sys.modules["userbot"] = warbot
+        sys.modules["userbot"] = dangercat
         # support for paperplaneextended
         sys.modules["userbot.events"] = dangercat
         spec.loader.exec_module(mod)
@@ -132,4 +132,4 @@ async def plug_channel(client, channel):
                 LOGS.error(str(e))
 
 
-# warbot
+# dangercat
