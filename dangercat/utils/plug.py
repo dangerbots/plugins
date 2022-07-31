@@ -37,7 +37,7 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import warbot.utils
+        import dangercat.utils
 
         path = Path(f"dangercat/plugins/{shortname}.py")
         name = "warbot.plugins.{}".format(shortname)
@@ -49,7 +49,7 @@ def load_module(shortname):
         import dangercat.utils
 
         path = Path(f"dangercat/plugins/{shortname}.py")
-        name = "warbot.plugins.{}".format(shortname)
+        name = "dangercat.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = Hell
@@ -80,7 +80,7 @@ def load_module(shortname):
         mod.hell_cmd = hell_cmd
         mod.sudo_cmd = sudo_cmd
         # support for other userbots
-        sys.modules["userbot.utils"] = warbot.utils
+        sys.modules["userbot.utils"] = dangercat.utils
         sys.modules["userbot"] = warbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = warbot
