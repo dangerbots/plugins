@@ -66,7 +66,7 @@ class Config(object):
         TAG_LOGGER = int(TAG_LOGGER)
     TEMP_DIR = os.environ.get("TEMP_DIR", None)
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
-    THUMB_IMG = os.environ.get("THUMB_IMG", "./warbot/resources/pics/hellbot_logo.jpg")
+    THUMB_IMG = os.environ.get("THUMB_IMG", "./dangercat/resources/pics/hellbot_logo.jpg")
     UNLOAD = list(os.environ.get("UNLOAD", "").split())
     UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "https://github.com/MeAbhish3k/waruserbot")
     WEATHER_API = os.environ.get("WEATHER_API", None)
