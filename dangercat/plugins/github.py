@@ -33,7 +33,7 @@ async def download(event):
             reply_message.media, GIT_TEMP_DIR
         )
     except Exception as e:
-        await eod(warbot, str(e))
+        await eod(dangercat, str(e))
     else:
         end = datetime.datetime.now()
         ms = (end - start).seconds
@@ -41,11 +41,11 @@ async def download(event):
         await dangercat.edit(
             "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
         )
-        await warbot.edit("Committing to Github....")
-        await git_commit(downloaded_file_name, path, branch, warbot)
+        await dangercat.edit("Committing to Github....")
+        await git_commit(downloaded_file_name, path, branch, dangercat)
 
 
-async def git_commit(file_name, path, branch, warbot):
+async def git_commit(file_name, path, branch, dangercat):
     content_list = []
     access_token = Config.GITHUB_ACCESS_TOKEN
     g = Github(access_token)
@@ -61,7 +61,7 @@ async def git_commit(file_name, path, branch, warbot):
     for i in content_list:
         create_file = True
         if i == 'ContentFile(path="' + file_name + '")':
-            return await warbot.edit("`File Already Exists`")
+            return await dangercat.edit("`File Already Exists`")
             create_file = False
     path = path
     file_name = file_name
@@ -80,9 +80,9 @@ async def git_commit(file_name, path, branch, warbot):
             )
         except:
             print("Cannot Create Plugin")
-            await eod(warbot, "Cannot Upload File")
+            await eod(dangercat, "Cannot Upload File")
     else:
-        return await eod(warbot, "`Committed Suicide`")
+        return await eod(dangercat, "`Committed Suicide`")
 
 
 @hell_cmd(pattern="github(?:\s|$)([\s\S]*)")
