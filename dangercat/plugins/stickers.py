@@ -16,7 +16,7 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.types import DocumentAttributeFilename, DocumentAttributeSticker, InputStickerSetID, MessageMediaPhoto, InputMessagesFilterDocument
 from telethon.utils import get_input_document
 
-from warbot.sql.gvar_sql import addgvar, gvarstat
+from dangercat.sql.gvar_sql import addgvar, gvarstat
 from . import *
 
 KANGING_STR = [
@@ -42,7 +42,7 @@ async def kang(event):
     un = f"@{user.username}" if user.username else HELL_USER
     un_ = user.username if user.username else Xabhish3k 
     message = await event.get_reply_message()
-    warbot = gvarstat("STICKER_PACKNAME")
+    dangercat = gvarstat("STICKER_PACKNAME")
     photo = None
     emojibypass = False
     is_anim = False
@@ -114,7 +114,7 @@ async def kang(event):
                 emoji = splat[1]
 
         packname = f"waruserbot_{un_}_{pack}"
-        packnick = f"{warbot}" if warbot else f"{un}'s WarUserBot Vol.{pack}"
+        packnick = f"{dangercat}" if dangercat else f"{un}'s WarUserBot Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -148,7 +148,7 @@ async def kang(event):
                     while "120" in x.text:
                         pack += 1
                         packname = f"waruserbot_{un_}_{pack}"
-                        packnick = f"{warbot}" if warbot else f"{un}'s WarUserBot Vol.{pack}"
+                        packnick = f"{dangercat}" if dangercat else f"{un}'s WarUserBot Vol.{pack}"
                         cmd = "/newpack"
                         await hell.edit(f"`Switching to Pack {str(pack)} due to insufficient space`")
                         await conv.send_message(packname)
@@ -192,7 +192,7 @@ async def kang(event):
 
                 if is_anim:
                     packname = f"waruserbot_{un_}_{pack}_anim"
-                    packnick = f"{warbot}" if warbot else f"{un}'s waruserbot Vol.{pack} (Animated)"
+                    packnick = f"{dangercat}" if dangercat else f"{un}'s waruserbot Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message("/addsticker")
                     await conv.get_response()
@@ -245,7 +245,7 @@ async def kang(event):
 
                 elif is_vid:
                     packname = f"waruserbot_{un_}_{pack}_vid"
-                    packnick = f"{warbot}" if warbot else f"{un}'s waruserbot (Video)"
+                    packnick = f"{dangercat}" if dangercat else f"{un}'s waruserbot (Video)"
                     cmd = "/newvideo"
                     await conv.send_message("/addsticker")
                     await conv.get_response()
@@ -273,7 +273,7 @@ async def kang(event):
             async with event.client.conversation("Stickers") as conv:
                 if not is_anim and not is_vid:
                     packname = f"waruserbot_{un_}_{pack}"
-                    packnick = f"{warbot}" if warbot else f"{un}'s waruserbot Vol.{pack}"
+                    packnick = f"{dangercat}" if dangercat else f"{un}'s waruserbot Vol.{pack}"
                     cmd = "/newpack"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -301,7 +301,7 @@ async def kang(event):
             
                 if is_anim:
                     packname = f"waruserbot_{un_}_{pack}_anim"
-                    packnick = f"{warbot}" if warbot else f"{un}'s WarUserBot Vol.{pack} (Animated)"
+                    packnick = f"{dangercat}" if dangercat else f"{un}'s WarUserBot Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -332,7 +332,7 @@ async def kang(event):
 
                 if is_vid:
                     packname = f"waruserbot_{un_}_{pack}_vid"
-                    packnick = f"{warbot}" if warbot else f"{un}'s WarUserBot (Video)"
+                    packnick = f"{dangercat}" if dangercat else f"{un}'s WarUserBot (Video)"
                     cmd = "/newvideo"
                     await conv.send_message(cmd)
                     await conv.get_response()
