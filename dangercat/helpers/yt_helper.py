@@ -3,7 +3,7 @@ import os
 import requests
 import urllib.parse
 
-from warbot.utils.extras import delete_hell as eod
+from dangercat.utils.extras import delete_hell as eod
 
 
 class Hell_YTS:
