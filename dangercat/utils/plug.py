@@ -26,7 +26,7 @@ from dangercat.utils import *
 # ENV
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from warbot.config import Config
+    from dangercat.config import Config
 else:
     if os.path.exists("Config.py"):
         from Config import Development as Config
@@ -39,16 +39,16 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import warbot.utils
 
-        path = Path(f"warbot/plugins/{shortname}.py")
+        path = Path(f"dangercat/plugins/{shortname}.py")
         name = "warbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("WarBot - Successfully imported " + shortname)
+        LOGS.info("dangercat - Successfully imported " + shortname)
     else:
-        import warbot.utils
+        import dangercat.utils
 
-        path = Path(f"warbot/plugins/{shortname}.py")
+        path = Path(f"dangercat/plugins/{shortname}.py")
         name = "warbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
@@ -59,7 +59,7 @@ def load_module(shortname):
         mod.H4 = H4
         mod.H5 = H5
         mod.Hell = Hell
-        mod.WarBot = WarBot
+        mod.dangercat = dangercat
         mod.tbot = WarBot
         mod.tgbot = bot.tgbot
         mod.command = command
@@ -87,7 +87,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["warbot.plugins." + shortname] = mod
-        LOGS.info("⚡ WarUserBot ⚡ - Successfully Imported " + shortname)
+        LOGS.info("⚡ dangercat ⚡ - Successfully Imported " + shortname)
 
 
 # remove plugins
@@ -122,7 +122,7 @@ async def plug_channel(client, channel):
                 return
             downloaded_file_name = await client.download_media(
                 await client.get_messages(channel, ids=plug_id),
-                "warbot/plugins/",
+                "dangercat/plugins/",
             )
             path1 = Path(downloaded_file_name)
             shortname = path1.stem
