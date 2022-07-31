@@ -156,7 +156,7 @@ async def _(event):
                     event.chat_id,
                     downloaded_file_name,
                     thumb=thumb,
-                    caption="reuploaded by WarBot",
+                    caption="reuploaded by dangercat",
                     force_document=False,
                     allow_cache=False,
                     reply_to=event.message.id,
