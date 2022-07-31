@@ -90,7 +90,7 @@ async def _(event):
     await event.client.send_file(
         event.chat_id,
         directory_name + ".zip",
-        caption="Zipped By WarBot",
+        caption="Zipped By dangercat",
         force_document=True,
         allow_cache=False,
         reply_to=event.message.id,
@@ -132,7 +132,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 directory_name + ".rar",
-                caption="rarred By WarBot",
+                caption="rarred By dangercat",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -179,7 +179,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 directory_name + ".7z",
-                caption="7z archived By WarBot",
+                caption="7z archived By dangercat",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -228,7 +228,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 output,
-                caption="TAR By WarBot",
+                caption="TAR By dangercat",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
