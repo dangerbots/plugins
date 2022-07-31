@@ -40,7 +40,7 @@ def load_module(shortname):
         import dangercat.utils
 
         path = Path(f"dangercat/plugins/{shortname}.py")
-        name = "warbot.plugins.{}".format(shortname)
+        name = "dangercat.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
