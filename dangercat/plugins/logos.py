@@ -62,7 +62,7 @@ async def _(event):
     draw.text(
         (w_, h_), text, font=font, fill="white", stroke_width=strik, stroke_fill="black"
     )
-    file_name = "WarBot.png"
+    file_name = "dangercat.png"
     end = datetime.datetime.now()
     ms = (end - start).seconds
     img.save(file_name, "png")
