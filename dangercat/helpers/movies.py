@@ -1,4 +1,5 @@
 import os
+import *
 from imdb import IMDb
 from justwatch import JustWatch
 
