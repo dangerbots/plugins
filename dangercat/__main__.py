@@ -14,7 +14,7 @@ from dangercat.version import __hell__ as hellver
 
 hl = Config.HANDLER
 
-DCAT_PIC = "https://telegra.ph/file/44edfd6fa6faaf5284264.jpg"
+DCAT_PIC = "https://telegra.ph/file/a711979a5c26d791209fa.jpg"
 
 
 # Client Starter
