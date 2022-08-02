@@ -10,7 +10,7 @@ from dangercat.sql.gvar_sql import addgvar, gvarstat
 
 # Creates the logger group on first deploy and adds the helper bot
 async def logger_id(client):
-    desc = "A Bot Logger Group For Waruserbot. DO NOT LEAVE THIS GROUP!!"
+    desc = "A Bot Logger Group For dangercat. DO NOT LEAVE THIS GROUP!!"
     new_rights = ChatAdminRights(
         add_admins=True,
         invite_users=True,
@@ -21,7 +21,7 @@ async def logger_id(client):
         manage_call=True,
     )
     try:
-        grp = await client(functions.channels.CreateChannelRequest(title="waruserbot Logger", about=desc, megagroup=True))
+        grp = await client(functions.channels.CreateChannelRequest(title="dangercat Logger", about=desc, megagroup=True))
         grp_id = grp.chats[0].id
         grp = await client(functions.messages.ExportChatInviteRequest(peer=grp_id))
         await client(functions.channels.InviteToChannelRequest(channel=grp_id, users=[Config.BOT_USERNAME]))
@@ -63,14 +63,14 @@ async def start_msg(client, pic, version, total):
 <b><i>Clients :</b></i> <code>{str(total)}</code>
 <b><i>Sudo :</b></i> <code>{is_sudo}</code>
 
-<b><i>»» <u><a href='https://t.me/waruserbot'>†hê WarUserBot</a></u> ««</i></b>
+<b><i>»» <u><a href='https://t.me/dangerbots'>†hê DangerCat</a></u> ««</i></b>
 """
     await client.send_file(
         Config.LOGGER_ID,
         pic,
         caption=text,
         parse_mode="HTML",
-        buttons=[[Button.url("The WarBotZ", "https://t.me/Thewarbotz")]],
+        buttons=[[Button.url("DANGERBOTS", "https://t.me/danger_bots")]],
     )
 
 
@@ -78,7 +78,7 @@ async def start_msg(client, pic, version, total):
 async def join_it(client):
     if client:
         try:
-            await client(functions.channels.JoinChannelRequest("@waruserbot"))
+            await client(functions.channels.JoinChannelRequest("@danger_bots"))
             await client(functions.messages.ImportChatInviteRequest('9lz1KPMwO9A4YTBl'))
         except BaseException:
             pass
