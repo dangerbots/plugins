@@ -75,7 +75,7 @@ async def start_hellbot():
         await plug_load("dangercat/plugins/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
         LOGS.info("⚡ Your dangercat Is Now Working ⚡")
-        LOGS.info("Head to @danger_bots for Updates. Also join @dangerbots chat group to get help regarding to waruserbot.")
+        LOGS.info("Head to @danger_bots for Updates. Also join @dangerbots chat group to get help regarding to dangercat.")
         LOGS.info(f"» Total Clients = {str(total)} «")
         await hell_is_on(total)
     except Exception as e:
