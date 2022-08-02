@@ -21,7 +21,7 @@ class Config(object):
     CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", "/app/.chromedriver/bin/chromedriver")
     DB_URI = os.environ.get("DATABASE_URL", None)
-    EMOJI_IN_HELP = os.environ.get("EMOJI_IN_HELP", "🌟")
+    EMOJI_IN_HELP = os.environ.get("EMOJI_IN_HELP", "💥")
     FBAN_LOG_GROUP = os.environ.get("FBAN_LOG_GROUP", None)
     if FBAN_LOG_GROUP:
         FBAN_LOG_GROUP = int(FBAN_LOG_GROUP)
@@ -68,7 +68,7 @@ class Config(object):
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
     THUMB_IMG = os.environ.get("THUMB_IMG", "./dangercat/resources/pics/hellbot_logo.jpg")
     UNLOAD = list(os.environ.get("UNLOAD", "").split())
-    UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "https://github.com/MeAbhish3k/waruserbot")
+    UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "https://github.com/dangerbots/dangercat")
     WEATHER_API = os.environ.get("WEATHER_API", None)
 
 
