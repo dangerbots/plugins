@@ -98,7 +98,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             if a:
                 help_pic = a.split(" ")[0]
             else:
-                help_pic = "https://telegra.ph/file/44edfd6fa6faaf5284264.jpg"
+                help_pic = "https://telegra.ph/file/a711979a5c26d791209fa.jpg"
             help_msg = f"🔰 **{hell_mention}**\n\n📜 __No.of Plugins__ : `{len(CMD_HELP)}` \n🗂️ __Commands__ : `{len(apn)}`\n🗒️ __Page__ : 1/{veriler[0]}"
             if help_pic == "DISABLE":
                 result = builder.article(
@@ -140,7 +140,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/44edfd6fa6faaf5284264.jpg"
+                PIC = "https://telegra.ph/file/a711979a5c26d791209fa.jpg"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     PIC,
@@ -324,7 +324,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         auth = await clients_list()
         if event.query.user_id in auth:
             veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
-            await event.edit(f"**⚜️ WarUserBot Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {hell_mention}\n\n        [©️ dangercat™️]({chnl_link})", buttons=veriler, link_preview=False)
+            await event.edit(f"**⚜️ dangercat Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {hell_mention}\n\n        [©️ dangercat™️]({chnl_link})", buttons=veriler, link_preview=False)
         else:
             reply_pop_up_alert = "You are not authorized to use me! \n© @WarUserBot ™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
