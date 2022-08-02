@@ -218,10 +218,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ʟᴇɢᴇɴᴅᴀʀʏ ᴀғ ᴡᴀʀᴜsᴇʀʙᴏᴛ⚡️**",
+                text=f"**⚡ʟᴇɢᴇɴᴅᴀʀʏ ᴀғ dangercat⚡️**",
                 buttons=[
-                    [Button.url("📑 ʀᴇᴘᴏ 📑", "https://github.com/MeAbhish3k/dangercat")],
-                    [Button.url("ᴡᴀʀᴜsᴇʀʙᴏᴛ", "https://t.me/dangercat")],
+                    [Button.url("📑 ʀᴇᴘᴏ 📑", "https://github.com/dangerbots/dangercat")],
+                    [Button.url("ᴡᴀʀᴜsᴇʀʙᴏᴛ", "https://t.me/danger_bots")],
                 ],
             )
 
@@ -240,12 +240,12 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text="""**Hey! This is [WarUserBot](https://t.me/dangercat) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 ᴄʜᴀɴɴᴇʟ 🔥", "https://t.me/waruserBot"),
-                        custom.Button.url("⚡ ɢʀᴏᴜᴘ ⚡", "https://t.me/dangercatsupport"),
+                        custom.Button.url("🔥 ᴄʜᴀɴɴᴇʟ 🔥", "https://t.me/danger_bots"),
+                        custom.Button.url("⚡ ɢʀᴏᴜᴘ ⚡", "https://t.me/dangerbots"),
                     ],
                     [
-                        custom.Button.url("✨ ʀᴇᴘᴏ ✨", "https://github.com/MeAbhish3k/dangercat"),
-                        custom.Button.url("🔰 ᴛᴜᴛᴏʀɪᴀʟ 🔰", "https://t.me/dangercat"),
+                        custom.Button.url("✨ ʀᴇᴘᴏ ✨", "https://github.com/dangerbots/dangercat"),
+                        custom.Button.url("🔰 ᴛᴜᴛᴏʀɪᴀʟ 🔰", "https://t.me/danger_bots"),
                     ],
                 ],
                 link_preview=False,
@@ -259,7 +259,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         if event.query.user_id in auth:
             reply_pop_up_alert = "This is for Other Users..."
         else:
-            reply_pop_up_alert = "🔰 This is WarUserBot PM Security to keep away unwanted retards from spamming PM !!"
+            reply_pop_up_alert = "🔰 This is dangercat PM Security to keep away unwanted retards from spamming PM !!"
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
