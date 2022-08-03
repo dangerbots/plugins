@@ -47,7 +47,7 @@ async def up(event):
                 pic_list.append(c)
         PIC = random.choice(pic_list)
     else:
-        PIC = "https://telegra.ph/file/9eff0e2a178089c223f13.jpg"
+        PIC = "https://telegra.ph/file/af4e0e424c2f6c56dc3dc.jpg"
     end = datetime.datetime.now()
     ling = (end - start).microseconds / 1000
     omk = ALIVE_TEMP.format(Xabhish3k, HELL_USER, tel_ver, hell_ver, is_sudo, uptime, ling)
