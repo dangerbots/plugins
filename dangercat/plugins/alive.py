@@ -14,11 +14,11 @@ ALIVE_TEMP = """
 <b><i>✨DANGERCAT IS ONLINE✨</b></i>  
 <i><b> » ᴏᴡɴᴇʀ </i></b> :  <a href='tg://user?id={}'>{}</a> 
  <b>» ᴛᴇʟᴇᴛʜᴏɴ :</b> <i>{}</i>
- <b>» ᴡᴀʀᴜsᴇʀʙᴏᴛ :</b> <i>{}</i>
+ <b>» DANGERCAT :</b> <i>{}</i>
  <b>» sᴜᴅᴏ :</b> <i>{}</i>
  <b>» ᴜᴘᴛɪᴍᴇ :</b> <i>{}</i>
  <b>» ᴘɪɴɢ :</b> <i>{}</i>
-<b><i>⚡️<a href='https://t.me/DANGER_BOTS'>[ ᴡᴀʀᴜsᴇʀʙᴏᴛ ]</a>⚡️</i></b>
+<b><i>⚡️<a href='https://t.me/DANGER_BOTS'>[⚡️DANGERCAT⚡️ ]</a>⚡️</i></b>
 """
 
 msg = """{}\n
