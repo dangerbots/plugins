@@ -70,7 +70,7 @@ async def is_limited(event):
         
 @hell_cmd(pattern="kickme$")
 async def leave(e):
-        await e.edit("😪 **KThnxBye** See u all in waruserbot!!")
+        await e.edit("😪 **KThnxBye** See u all in dangercat!!")
         time.sleep(1)
         if "-" in str(e.chat_id):
             await event.client(LeaveChannelRequest(e.chat_id))
