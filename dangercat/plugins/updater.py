@@ -90,7 +90,7 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await eor(event, "✅ Successfully updated WarUserBot!\n\nBot is restarting please wait for a minute.")
+    await eor(event, "✅ Successfully updated dangercat!\n\nBot is restarting please wait for a minute.")
     args = [sys.executable, "-m", "dangercat"]
     os.execle(sys.executable, *args, os.environ)
     return
@@ -148,7 +148,7 @@ async def upstream(event):
         _version, _release, _branch, _author, _auturl = await war_info(dangercat_info)
         output_ = f"**Your Bot Version :** `{hell_ver}` \n**Owner :** {hell_mention} \n\n**Official WarUserBot Version :** `{_version}` \n**Release Date :** `{_release}` \n**Official Repo Branch :** `{_branch}` \n**Update By :** [{_author}]({_auturl})"
         if str(_version) not in str(hell_ver):
-            output_ += f"\n\n**Do** `{hl}update build` **to update your WarUserBot to latest version.**"
+            output_ += f"\n\n**Do** `{hl}update build` **to update your dangercat to latest version.**"
         await event.edit(output_)
         return repo.__del__()
     if conf == "" and not force_update:
@@ -158,7 +158,7 @@ async def upstream(event):
 
     if force_update:
         await event.edit(
-            "`Force-Updating Waruserbot. Please wait...`"
+            "`Force-Updating dangercat. Please wait...`"
         )
     if conf == "now":
         await event.edit("`Update In Progress! Please Wait....`")
@@ -219,7 +219,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
 @hell_cmd(pattern="update build$")
 async def upstream(event):
     event = await eor(event, "`Hard-Update In Progress... \nPlease wait until docker build is finished...`")
-    off_repo = "https://github.com/MeAbhish3k/waruserbot"
+    off_repo = "https://github.com/dangerbots/dangercat"
     os.chdir("/app")
     git_hell = f"rm -rf .git"
     try:
@@ -250,16 +250,16 @@ async def upstream(event):
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
     _version, _release, _branch, _author, _auturl = await war_info(dangercat_info)
-    await event.edit(f"<b><i>waruserbot Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
+    await event.edit(f"<b><i>dangercat Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
     await deploy(event, repo, ups_rem, ac_br, txt)
 
 
 CmdHelp("update").add_command(
   "update", None, "Checks if any new update is available."
 ).add_command(
-  "update now", None, "Soft-Update Your WarUserBot. Basically if you restart dyno it will go back to previous deploy."
+  "update now", None, "Soft-Update Your DANGERCAT. Basically if you restart dyno it will go back to previous deploy."
 ).add_command(
-  "update build", None, "Hard-Update Your WarUserBot. This won't take you back to your previous deploy. This will be triggered even if there is no changelog."
+  "update build", None, "Hard-Update Your DANGERCAT. This won't take you back to your previous deploy. This will be triggered even if there is no changelog."
 ).add_info(
   "Waruserbot Updater."
 ).add_warning(
