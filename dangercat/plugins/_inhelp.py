@@ -98,7 +98,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             if a:
                 help_pic = a.split(" ")[0]
             else:
-                help_pic = "https://telegra.ph/file/ae44a59b8d608c08503cd.jpg"
+                help_pic = "https://telegra.ph/file/9eff0e2a178089c223f13.jpg"
             help_msg = f"🔰 **{hell_mention}**\n\n📜 __No.of Plugins__ : `{len(CMD_HELP)}` \n🗂️ __Commands__ : `{len(apn)}`\n🗒️ __Page__ : 1/{veriler[0]}"
             if help_pic == "DISABLE":
                 result = builder.article(
@@ -140,7 +140,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/ae44a59b8d608c08503cd.jpg"
+                PIC = "https://telegra.ph/file/9eff0e2a178089c223f13.jpg"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     PIC,
@@ -179,7 +179,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/ae44a59b8d608c08503cd.jpg"
+                PIC = "https://telegra.ph/file/9eff0e2a178089c223f13.jpg"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     file=PIC,
@@ -218,7 +218,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ʟᴇɢᴇɴᴅᴀʀʏ ᴀғ dangercat⚡️**",
+                text=f"**⚡DANGERCAT⚡️**",
                 buttons=[
                     [Button.url("📑 ʀᴇᴘᴏ 📑", "https://github.com/dangerbots/dangercat")],
                     [Button.url("Dangerbots", "https://t.me/danger_bots")],
@@ -419,6 +419,6 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         else:
-            return await event.answer("You are not authorized to use me! \n© Waruserbot ™", cache_time=0, alert=True)
+            return await event.answer("You are not authorized to use me! \n© dangercat ™", cache_time=0, alert=True)
 
 
