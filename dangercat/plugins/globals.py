@@ -459,7 +459,7 @@ async def gm(event):
     try:
         gsql.gmute(userid, "gmute")
         if Config.ABUSE == "ON":
-            await event.client.send_file(event.chat_id, shhh, caption=f"**(~‾▿‾)~ Chup [Madarchod](tg://user?id={userid}) ....**", reply_to=reply)
+            await event.client.send_file(event.chat_id, shhh, caption=f"**(~‾▿‾)~ Shh keep quiet [idiot](tg://user?id={userid}) ....**", reply_to=reply)
             await hell.delete()
         else:
             await eor(hell, f"**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )")
