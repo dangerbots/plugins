@@ -21,7 +21,7 @@ async def logger_id(client):
         manage_call=True,
     )
     try:
-        grp = await client(functions.channels.CreateChannelRequest(title="⚡️DANGERCAT LOGGER", about=desc, megagroup=True))
+        grp = await client(functions.channels.CreateChannelRequest(title="DANGERCAT LOGGER", about=desc, megagroup=True))
         grp_id = grp.chats[0].id
         grp = await client(functions.messages.ExportChatInviteRequest(peer=grp_id))
         await client(functions.channels.InviteToChannelRequest(channel=grp_id, users=[Config.BOT_USERNAME]))
