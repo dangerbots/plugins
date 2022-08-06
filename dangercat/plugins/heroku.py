@@ -31,13 +31,13 @@ async def restart(event):
         app = Heroku.apps()[HEROKU_APP_NAME]
         app.restart()
     else:
-        await eor(event, f"✅ **Restarted WarUserBot** \n**Type** `{hl}ping` **after 1 minute to check if I am working !**")
+        await eor(event, f"✅ **Restarted dangercat** \n**Type** `{hl}ping` **after 1 minute to check if I am working !**")
         await event.client.disconnect()
 
 
 @hell_cmd(pattern="restart$")
 async def re(hell):
-    event = await eor(hell, "Restarting WarUserBOT ...")
+    event = await eor(hell, "Restarting DANGERCAT...")
     try:
         await restart(event)
     except CancelledError:
@@ -48,13 +48,13 @@ async def re(hell):
 
 @hell_cmd(pattern="reload$")
 async def rel(event):
-    await eor(event, "Reloading WarUserBot... Wait for few seconds...")
+    await eor(event, "Reloading dangercat... Wait for few seconds...")
     await reload_hellbot()
 
 
 @hell_cmd(pattern="shutdown$")
 async def down(hell):
-    event = await eor(hell, "`Turing Off WarUserBot...`")
+    event = await eor(hell, "`Turing Off dangercat...`")
     await asyncio.sleep(2)
     await event.edit("**[ ⚠️ ]** \n**WarUserBot is now turned off. Manually turn it on to start again.**")
     if HEROKU_APP is not None:
