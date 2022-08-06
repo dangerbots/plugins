@@ -27,7 +27,8 @@ if Config.TAG_LOGGER:
         ammoca_message += f"👆 #TAG\n\n**• Tag By :** {krakenm} \n**• Tag For :** {hell_men} \n**• Chat :** [{where_m}]({message_link})"
         if tagger is not None:
             
-            
+            )
+
             
         else:
             return
