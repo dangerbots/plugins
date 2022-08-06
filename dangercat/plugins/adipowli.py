@@ -1,3 +1,4 @@
+#credit @dangerpro_bot
 
 from . import *
 @bot.on(admin_cmd(pattern=r"dgs", outgoing=True))
