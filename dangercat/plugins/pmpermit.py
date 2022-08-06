@@ -187,7 +187,7 @@ if PM_ON_OFF != "DISABLE":
         cid = await client_id(event)
         Xabhish3k, hell_mention = cid[0], cid[2]
         CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
-        HELL_FIRST = "**馃敟 WarUserBot Pr卯v茫鈥犆� S锚莽眉r茂ty Pr酶鈥犆睹祃 馃敟**\n\nHello!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(hell_mention, CSTM_PMP)
+        HELL_FIRST = "**馃敟 dangercat Pr卯v茫鈥犆� S锚莽眉r茂ty Pr酶鈥犆睹祃 馃敟**\n\nHello!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(hell_mention, CSTM_PMP)
         if event.sender_id == Xabhish3k:
             return
         if str(event.sender_id) in DEVLIST:
