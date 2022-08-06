@@ -1,8 +1,3 @@
-# Dialogues by @Surv_ivor and @Sathan_Of_Telegram
-import asyncio
-import random
-
-from dangercat.utils import admin_cmd
 
 from . import *
 @bot.on(admin_cmd(pattern=r"dgs", outgoing=True))
