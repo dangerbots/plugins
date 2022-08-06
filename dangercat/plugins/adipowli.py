@@ -258,4 +258,4 @@ async def _(event):
         )
 
 CmdHelp("adipowli").add_command(
-  ",dgs", "Reply to a user", "jest for a fun")
+  ",dgs", "Reply to a user", "jest for a fun").add()
