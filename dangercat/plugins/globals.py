@@ -192,7 +192,7 @@ async def _(event):
     if userid == Xabhish3k:
         return await eod(hell, "🥴 **Nashe me hai kya lawde ‽**")
     if userid == 5199459106:
-        return await eod(hell, "😂 **he is my dev user i can't gban him ‽**")
+        return await eod(hell, "😂 **he is my developer i can't gban him ‽**")
     if str(userid) in DEVLIST:
         return await eod(hell, "😑 **GBan my creator ?¿ Really‽**")
     if is_gbanned(userid):
