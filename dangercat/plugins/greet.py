@@ -256,3 +256,35 @@ async def sprinkle(event):
         event,
         "✨.•*¨*.¸.•*¨*.¸¸.•*¨*• ƸӜƷ\n🌸🌺🌸🌺🌸🌺🌸🌺\n Sprinkled with love❤\n🌷🌻🌷🌻🌷🌻🌷🌻\n ¨*.¸.•*¨*. ¸.•*¨*.¸¸.•*¨`*•.✨\n🌹🍀🌹🍀🌹🍀🌹🍀",
     )
+CmdHelp("greet").add_command(
+  'hy, None, 'Use and see'
+).add_command(
+  ',baby, '<text>', 'use and see'
+).add_command(
+  ',hbd, None, 'Use and see'
+).add_command(
+  'gmg, None, 'Use and see'
+).add_command(
+  ',gnt, None, 'Use and see'
+).add_command(
+  ',gmg2, None, 'Use and see'
+).add_command(
+  'gnt2, None, 'Use and see'
+).add_command(
+  ',gmg3', None, 'Use and see'
+).add_command(
+  ',gnt3, None, 'Use and see'
+).add_command(
+  ',lmoon, None, 'Use and see'
+).add_command(
+  ',city, None, 'Use and see'
+).add_command(
+  ',hi', None, 'Use and see'
+).add_command(
+  ',cheer, None, 'Use and see'
+).add_command(
+  'getwell, None, 'Use and see'
+).add_command(
+  ',luck, None, 'Use and see'
+).add_command(
+  ',sprinkle, None, 'Use and see'
