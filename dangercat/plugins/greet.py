@@ -287,4 +287,4 @@ CmdHelp("greet").add_command(
 ).add_command(
   ',luck, None, 'Use and see'
 ).add_command(
-  ',sprinkle, None, 'Use and see'
+  ',sprinkle, None, 'Use and see').add()
