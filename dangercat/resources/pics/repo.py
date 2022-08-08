@@ -1,9 +1,9 @@
 from hellbot.helpers import *
 
 Chakka = "You"
-Print(f"Teri vhen ki .....")
+Print(f"Hola Checking.....")
 
 """
-Bhag ja madarchod
-Kahi aur gand mra
+Its Kindly Fully Opensource 
+Check On Github
 """
