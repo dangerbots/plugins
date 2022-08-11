@@ -73,9 +73,9 @@ async def slap(replied_user, event):
     return caption
 
 
-@hell_cmd(pattern=f"randi$")
+@hell_cmd(pattern=f"gn$")
 async def rendi(e):
-   txt = random.choice(RENDISTR)
+   txt = random.choice(GDNIGHT)
    await eor(e, txt)
    
    
@@ -250,13 +250,13 @@ CmdHelp("fun").add_command(
 ).add_command(
   "rape", None, "No offence. Use and see -_-"
 ).add_command(
-  "gali", None, "You know what this cmd is"
+  "gali", None, "good mornings"
 ).add_command(
   "run", None, "Chala jaa bhosdike"
 ).add_command(
   "hiabuse", None, "Abuses in Hindi as well as English OwO"
 ).add_command(
-  "randi", None, "Are you rendi?"
+  "randi", None, "good nights?"
 ).add_command(
   "habuse", None, "Some of the abusive shayris"
 ).add_command(
