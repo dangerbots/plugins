@@ -109,9 +109,9 @@ async def metoo(e):
     await eor(e, txt)
 
 
-@hell_cmd(pattern=f"gali$")
+@hell_cmd(pattern=f"gm$")
 async def metoo(e):
-    txt = random.choice(GAALI_STR)
+    txt = random.choice(GDMORNING)
     await eor(e, txt)
 
 
