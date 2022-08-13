@@ -19,7 +19,6 @@ hachoir
 heroku3
 html-telegraph-poster
 humanize
-insta_regex
 IMDbPY
 jikanpy
 justwatch
