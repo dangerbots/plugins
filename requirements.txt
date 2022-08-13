@@ -59,7 +59,7 @@ vcsi
 wand
 wget
 wheel
-
+yt_dlp
 git+https://github.com/xabhish3k/py-googletrans@master
 git+https://github.com/xabhish3k/Wikipedia@master
 
