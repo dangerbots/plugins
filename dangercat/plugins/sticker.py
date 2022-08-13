@@ -507,4 +507,4 @@ CmdHelp("stickers").add_command(
 ).add_warning(
     "✅ Harmless Module."
 ).add()
-Footer
+
