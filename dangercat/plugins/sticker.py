@@ -17,7 +17,7 @@ from telethon.tl.types import (DocumentAttributeFilename, DocumentAttributeStick
                                InputMessagesFilterDocument, InputStickerSetID)
 from telethon.utils import get_input_document
 
-from dangercat.DB.gvar_sql import addgvar, gvarstat
+from dangercat.sql.gvar_sql import addgvar, gvarstat
 from . import *
 
 class STICKER:
